@@ -1,0 +1,12 @@
+https://downloads.arduino.cc/arduino-1.8.13-windows.zip
+https://www.tinkercad.com/
+
+https://www.geeksforgeeks.org/functions-in-c/
+https://howtomechatronics.com/how-it-works/how-servo-motors-work-how-to-control-servos-using-arduino/
+https://www.arduino.cc/reference/en/libraries/servo/
+https://www.programiz.com/c-programming/c-structures
+https://www.w3schools.com/cpp/cpp_classes.asp
+https://www.youtube.com/watch?v=eyqwLiowZiU
+
+https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf - ultrasonic sensor datasheet
+https://cdn-learn.adafruit.com/assets/assets/000/010/133/original/BISS0001.pdf - PIR IC datasheet

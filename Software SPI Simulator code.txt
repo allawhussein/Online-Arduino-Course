@@ -1,0 +1,82 @@
+#include<math.h>
+typedef struct SSPI
+{
+  void begin()
+  {
+    pinMode(10, OUTPUT);
+    pinMode(8, OUTPUT);
+    pinMode(7, INPUT);
+  }
+  void setClockDivider()
+  {
+    1;
+  }
+  char transfer(char chr)
+  {
+    bool data[8];
+    for(int i=0;chr>0;i++)    
+    {    
+      data[i]=chr%2;    
+      chr=chr/2;    
+  	}  
+    delay(10);
+    for (int i = 7; i >= 0; i--)
+    {
+      digitalWrite(8, data[i]);
+      delay(1);
+      digitalWrite(10, LOW);
+      data[i] = digitalRead(7);
+      delay(4);
+      digitalWrite(10, HIGH);
+      delay(5);
+    }
+    int num = 0;
+    for (int i = 0; i < 8; i++) num+=pow(2, i)*data[i];
+    return (char)num;
+  }
+}SSPI;
+SSPI SPI;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+char a = 'a';
+
+
+
+
+
+void setup()
+{
+  pinMode(12, OUTPUT);
+  pinMode(10, OUTPUT);
+  digitalWrite(12, HIGH);
+  digitalWrite(10, HIGH);
+  Serial.begin(115200);
+}
+
+void loop()
+{
+  
+  digitalWrite(12, LOW);
+  Serial.print(SPI.transfer(a));
+  digitalWrite(12, HIGH);
+  delay(500);
+  a = a + 1;
+}
